@@ -60,6 +60,8 @@ namespace work {
 		/// Требуется переменная конструктора.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+		System::Void adds_Click(System::Object^  sender, System::EventArgs^  e);
+		System::Void downloadBottom_Click(System::Object^  sender, System::EventArgs^  e);
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -168,21 +170,6 @@ namespace work {
 	public:
 		// Путь к папке игры
 		char path;
-
-	private: System::Void downloadBottom_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
-	private: System::Void adds_Click(System::Object^  sender, System::EventArgs^  e) {
-				 				 FolderBrowserDialog^ MyDialog = gcnew FolderBrowserDialog;
-				 // Keeps the user from selecting a custom color.
-				//MyDialog->AllowFullOpen = false;
-				// Allows the user to get help. (The default is false.)
-				//MyDialog->ShowHelp = true;
-				// Sets the initial color select to the current text color.
-				//MyDialog->Color = 
-				MyDialog->ShowDialog() ;
-
-			 }
-
 };
 }
 

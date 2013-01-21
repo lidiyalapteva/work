@@ -3,4 +3,13 @@
 // не часто изменяются
 #pragma once
 
+#include <string>
+#include <iostream>
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
+namespace work{
+struct Games{
+		
+	};
+	
+};
+

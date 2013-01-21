@@ -15,6 +15,6 @@ int main(array<System::String ^> ^args)
 
 	// Создание главного окна и его запуск
 	Application::Run(gcnew Main());
-	Application::Run(gcnew config());
+//	Application::Run(gcnew config());
 	return 0;
 }
