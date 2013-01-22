@@ -35,33 +35,28 @@ namespace work {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::ProgressBar^  downloadAll;
 	private: System::Windows::Forms::Button^  add;
-	protected: 
-
-
-	protected: 
-
-
-	private: System::Windows::Forms::Button^  downloadBottom;
-	private: System::Windows::Forms::DataGridView^  ptofile;
-
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  name;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  gamepath;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^  version;
-	private: System::Windows::Forms::DataGridViewButtonColumn^  Del;
-
-
-
-
-
-	private:
+			System::Windows::Forms::Button^  button1;
+			System::Windows::Forms::Button^  button2;
+			System::Windows::Forms::CheckBox^  checkBox1;
+			System::Windows::Forms::Label^  label1;
+			System::Windows::Forms::Label^  label2;
+			System::Windows::Forms::Label^  label3;
+			System::Windows::Forms::Label^  label4;
+			System::Windows::Forms::Label^  label5;
+			System::Windows::Forms::Label^  label6;
+			System::Windows::Forms::Label^  label7;
+			System::Windows::Forms::Label^  label8;
+			System::Windows::Forms::Button^  button3;
+			System::ComponentModel::IContainer^  components;
 		/// <summary>
 		/// Требуется переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::Windows::Forms::Label^  labeladd;
+
 		System::Void adds_Click(System::Object^  sender, System::EventArgs^  e);
 		System::Void downloadBottom_Click(System::Object^  sender, System::EventArgs^  e);
+		System::Void loadConfig();
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -70,98 +65,162 @@ namespace work {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->downloadAll = (gcnew System::Windows::Forms::ProgressBar());
 			this->add = (gcnew System::Windows::Forms::Button());
-			this->downloadBottom = (gcnew System::Windows::Forms::Button());
-			this->ptofile = (gcnew System::Windows::Forms::DataGridView());
-			this->name = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->gamepath = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->version = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Del = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ptofile))->BeginInit();
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
-			// 
-			// downloadAll
-			// 
-			this->downloadAll->Location = System::Drawing::Point(12, 47);
-			this->downloadAll->Name = L"downloadAll";
-			this->downloadAll->Size = System::Drawing::Size(506, 32);
-			this->downloadAll->TabIndex = 0;
 			// 
 			// add
 			// 
-			this->add->Location = System::Drawing::Point(12, 96);
+			this->add->Location = System::Drawing::Point(561, 17);
 			this->add->Name = L"add";
-			this->add->Size = System::Drawing::Size(75, 23);
+			this->add->Size = System::Drawing::Size(93, 23);
 			this->add->TabIndex = 1;
 			this->add->Text = L"Добавить";
 			this->add->UseVisualStyleBackColor = true;
 			this->add->Click += gcnew System::EventHandler(this, &Main::adds_Click);
 			// 
-			// downloadBottom
+			// button1
 			// 
-			this->downloadBottom->Location = System::Drawing::Point(551, 47);
-			this->downloadBottom->Name = L"downloadBottom";
-			this->downloadBottom->Size = System::Drawing::Size(75, 32);
-			this->downloadBottom->TabIndex = 2;
-			this->downloadBottom->Text = L"Обновить";
-			this->downloadBottom->UseVisualStyleBackColor = true;
-			this->downloadBottom->Click += gcnew System::EventHandler(this, &Main::downloadBottom_Click);
+			this->button1->Location = System::Drawing::Point(151, 17);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"Удалить";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
-			// ptofile
+			// button2
 			// 
-			this->ptofile->AllowUserToAddRows = false;
-			this->ptofile->AllowUserToDeleteRows = false;
-			this->ptofile->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->ptofile->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->ptofile->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {this->name, this->gamepath, 
-				this->version, this->Del});
-			this->ptofile->Location = System::Drawing::Point(12, 180);
-			this->ptofile->Name = L"ptofile";
-			this->ptofile->ReadOnly = true;
-			this->ptofile->Size = System::Drawing::Size(603, 150);
-			this->ptofile->TabIndex = 3;
+			this->button2->Location = System::Drawing::Point(52, 17);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 4;
+			this->button2->Text = L"Обновить";
+			this->button2->UseVisualStyleBackColor = true;
 			// 
-			// name
+			// checkBox1
 			// 
-			this->name->HeaderText = L"Название игры";
-			this->name->Name = L"name";
-			this->name->ReadOnly = true;
-			this->name->Width = 150;
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(33, 79);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(15, 14);
+			this->checkBox1->TabIndex = 5;
+			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
-			// gamepath
+			// label1
 			// 
-			this->gamepath->HeaderText = L"Путь";
-			this->gamepath->Name = L"gamepath";
-			this->gamepath->ReadOnly = true;
-			this->gamepath->Width = 250;
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(62, 50);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(85, 13);
+			this->label1->TabIndex = 6;
+			this->label1->Text = L"Название игры";
 			// 
-			// version
+			// label2
 			// 
-			this->version->HeaderText = L"Версия";
-			this->version->Name = L"version";
-			this->version->ReadOnly = true;
-			this->version->Width = 50;
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(168, 50);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(31, 13);
+			this->label2->TabIndex = 7;
+			this->label2->Text = L"Путь";
 			// 
-			// Del
+			// label3
 			// 
-			this->Del->HeaderText = L"Удалить";
-			this->Del->Name = L"Del";
-			this->Del->ReadOnly = true;
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(403, 50);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(44, 13);
+			this->label3->TabIndex = 8;
+			this->label3->Text = L"Версия";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(465, 50);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(62, 13);
+			this->label4->TabIndex = 9;
+			this->label4->Text = L"Загружено";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(64, 79);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(65, 13);
+			this->label5->TabIndex = 10;
+			this->label5->Text = L"CS RUS 1.8";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(171, 79);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(85, 13);
+			this->label6->TabIndex = 11;
+			this->label6->Text = L"d:\\Games\\CS18";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(415, 79);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(22, 13);
+			this->label7->TabIndex = 12;
+			this->label7->Text = L"1.1";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(482, 79);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(21, 13);
+			this->label8->TabIndex = 13;
+			this->label8->Text = L"0%";
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(561, 74);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(93, 23);
+			this->button3->TabIndex = 14;
+			this->button3->Text = L"Редактировать";
+			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// Main
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(720, 438);
-			this->Controls->Add(this->ptofile);
-			this->Controls->Add(this->downloadBottom);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->checkBox1);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->add);
-			this->Controls->Add(this->downloadAll);
 			this->Name = L"Main";
 			this->Text = L"Главное окно";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->ptofile))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
+			this->loadConfig();
 
 		}
 #pragma endregion
@@ -170,6 +229,7 @@ namespace work {
 	public:
 		// Путь к папке игры
 		char path;
+
 };
 }
 
